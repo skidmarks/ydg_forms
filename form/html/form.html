@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/design.js"></script>    
+</head>
+<body>
+
+    <!-- evt_form_wrap page -->
+    <div class="evt_form_page shown">
+        <div class="evt_form_wrap">
+            <section>
+                <div class="steps">
+                    <div class="reverse">
+                        <div class="step step_name">
+                            <h2 class="tit_name">이름을 알려주세요</h2>
+                            <div class="input-group">
+                                <input type="text" name="name" class="ipt_name" id="name" placeholder="이름" required="required" autocomplete="off" />
+                                <label for="name">이름</label>
+                            </div>
+                        </div><!--/step-->         
+
+                        <div class="step step_phone">
+                            <h2 class="tit_phone">휴대폰 번호를 알려주세요</h2>
+                            <h2 class="info_tit"><span class="p_name"></span>님 정보가 맞나요?</h2>
+                            <div class="input-group">
+                                <input type="number" name="phone" class="ipt_phone" value="" id="phone" placeholder="'-' 없이 번호만" required="required" maxlength="11" autocomplete="off" />
+                                <label for="phone">휴대폰 번호</label>
+                            </div>
+                        </div><!--/step-->
+                    </div><!--/reverse-->
+                    <button class="btn btn_name_conf">확인</button>
+                    <div class="phone_para">
+                        <p>입력하신 정보는 상담 신청 완료될 때까지 저장되지 않습니다.</p>
+                        <p>타인의 개인정보 도용 시 형사상 처벌을 받을 수 있으며, 정확한 정보를 입력하지 않을 경우 상품 안내 불가 등의 불이익을 받을 수 있습니다.</p>
+                    </div>
+                    <button class="btn btn_phone_conf">인증하기</button>
+                </div>                                         
+            </section> 
+        </div><!--/evt_form_wrap-->
+        <!-- /evt_form_wrap page -->
+
+        <!-- cert_numb_wrap -->
+        <div class="cert_numb_wrap">
+            <section>
+                <div class="steps">
+                    <div class="step step_cert">
+                        <h2>문자로 받은 인증번호를 <br>입력해 주세요</h2>
+                        <br>
+                        <br>
+                        <div class="input-group alt">
+                            <input type="text" name="cert_num" id="cert_num" class="cert_num" placeholder="인증번호 6자리" required="required" autocomplete="off" />
+                        </div>
+                    </div>                            
+                </div>
+            </section>                
+            <button class="btn_close_info_cert"><img src="../images/left_alt.png" alt="뒤로가기"></button>
+        </div><!--/certNumb_wrap-->
+        <button class="btn_close_form_layer"><img src="../images/x.png" alt="닫기"></button>        
+    </div><!-- evt_form_page -->    
+    <!-- /cert_numb_wrap -->
+
+    <!-- permission page -->
+    <div class="pmission_mask"></div>
+    <div class="pmission_wrap">
+        <div class="inner">
+            <h3>상담 신청을 하려면 동의가 필요해요</h3>
+            <p>하기 동의를 거부할 권리는 있으나, (필수)항목에 대한 동의 거부 시 이벤트 참여 및 상품 안내가 불가능한 불이익이 있어요.</p>
+
+            <div id="per_01" class="line_top">
+                <div class="agr_title_1">
+                    <span class="chk_each_box"><input type="checkbox" name="agree" id="terms01" /><label for="terms01"></label></span>
+                    <label for="terms01"><em class="lb_txt">[필수] 개인정보 수집 및 이용 동의</em></label>
+                    <a href="#" class="btn_details">보기</a>
+                </div>
+                <div class="prm_wrap">
+                    <div class="agr_cnt">
+                        <div class="inner">
+                            <h5>개인정보 수집자</h5>
+                            <p>· ㈜열심히커뮤니케이션즈</p>
+                            <h5>개인정보의 수집·이용목적</h5>
+                            <p><strong>· 상담 상품 안내(전화, 문자) 및 고객 민원 처리</strong></p>
+                            <p>· 경품 발송, 추가 경품 증정 관련 안내</p>
+                            <h5>개인정보 수집항목</h5>
+                            <p>· [필수정보] 성명, 휴대폰번호, 경품</p>
+                            <p>· [자동으로 수집되는 정보] 참여매체, 참여일시, 참여이벤트, 경품, IP Address</p>
+                            <h5>개인정보 보유기간</h5>
+                            <p><strong>· 수집일로부터 5년간 (고객 요청 시 지체없이 파기)</strong></p>
+                            <a href="#">개인정보처리방침 보기</a>
+                            <p>수집된 개인정보의 위탁은 서비스 제공에 필수적이므로 별도 동의를 받지 않습니다. 위탁에 관한 내용은 개인정보처리방침 전문을 확인하시면 됩니다.</p>
+                        </div>
+                    </div><!-- /agr_cnt -->  
+                </div><!-- prm_wrap end -->
+            </div><!-- per_01 end -->
+            <div id="per_02">
+               <div class="agr_title_2">
+                    <span class="chk_each_box"><input type="checkbox" name="subAgree" id="terms02" /><label for="terms02"></label></span>
+                    <label for="terms02"><em class="lb_txt">[선택] 마케팅 정보 수신 동의</em></label>
+                    <a href="#" class="btn_details">보기</a>
+                </div>
+                <div class="prm_wrap">
+                    <div class="agr_cnt">
+                        <div class="inner">
+                            <h5>개인정보 수집자</h5>
+                            <p>· ㈜열심히커뮤니케이션즈</p>
+                            <h5>개인정보의 수집·이용목적</h5>
+                            <p><strong>· 수집된 개인정보를 활용한 통계 작성, 자사·제휴사 상품의 마케팅 및 맞춤 정보 제공</strong></p>
+                            <h5>개인정보 수집항목</h5>
+                            <p>· 성명, 휴대폰번호</p>
+                            <h5>개인정보 보유·이용기간</h5>
+                            <p><strong>· 수집일로부터 5년 (고객 요청 시 지체없이 파기)</strong></p>
+                        </div>
+                    </div><!-- /agr_cnt --> 
+                </div><!-- prm_wrap end -->
+            </div><!-- per_02 end -->   
+            
+            <button class="btn btn_agree_pm">동의하기</button>
+            <button class="btn altC btn_close_pm">닫기</button>
+        </div>
+    </div><!--/pmission_wrap-->
+    <!-- /permission page -->    
+
+    <div class="completed_wrap">
+        <img src="../images/join_completed.png" alt="전화신청 이미지">
+        <h2>상담 신청 완료!</h2>
+        <h3>친절한 전문상담원이 <br>전화드릴 예정입니다</h3>
+        <button class="btn btn_close_completed">닫기</button>
+        <p>상품 안내 및 이벤트 안내 동의 철회: 080-519-1234(무료)</p>
+    </div>
+
+    <div class="joined_wrap">
+        <img src="../images/joined_yet.png" alt="죄송합니다. 고객님은 이미 참여하셨습니다. (본인 명의 연락처당 1회 참여가능) - 개인정보 수집 및 이용 동의 철회: 080-519-1234(무료)">
+        <button class="btn btn_close_joined">닫기</button>
+    </div>
+</body>
+</html>
